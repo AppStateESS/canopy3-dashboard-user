@@ -1,0 +1,9 @@
+[
+  "user_user",
+  "user_log",
+  "user_role",
+  "user_permission",
+  "user_role_permission",
+  "user_resource_permission",
+  "user_site_member"
+]

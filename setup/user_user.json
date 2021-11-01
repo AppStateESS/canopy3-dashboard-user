@@ -1,0 +1,111 @@
+{
+    "tableName": "user_user",
+    "className": "Dashboard\\User\\Resource\\User",
+    "properties": {
+        "id": {
+            "type": "int",
+            "default": null,
+            "field": {
+                "datatype": "int",
+                "size": 11,
+                "isNull": true,
+                "primary": true
+            }
+        },
+        "username": {
+            "type": "string",
+            "default": null,
+            "field": {
+                "datatype": "varchar",
+                "size": 255,
+                "isNull": true
+            }
+        },
+        "email": {
+            "type": "string",
+            "default": null,
+            "field": {
+                "datatype": "varchar",
+                "size": 255,
+                "isNull": true
+            }
+        },
+        "firstName": {
+            "type": "string",
+            "default": null,
+            "field": {
+                "datatype": "varchar",
+                "size": 255,
+                "isNull": true
+            }
+        },
+        "lastName": {
+            "type": "string",
+            "default": null,
+            "field": {
+                "datatype": "varchar",
+                "size": 255,
+                "isNull": true
+            }
+        },
+        "lastLogged": {
+            "type": "DateTime",
+            "default": null,
+            "field": {
+                "datatype": {
+                    "mysql": "datetime",
+                    "pgsql": "timestamp"
+                },
+                "isNull": true
+            }
+        },
+        "internalID": {
+            "type": "string",
+            "default": null,
+            "field": {
+                "datatype": "varchar",
+                "size": 255,
+                "isNull": true
+            }
+        },
+        "logCount": {
+            "type": "int",
+            "default": 0,
+            "field": {
+                "datatype": "int",
+                "size": 11,
+                "isNull": false
+            }
+        },
+        "created": {
+            "type": "DateTime",
+            "default": null,
+            "field": {
+                "datatype": {
+                    "mysql": "datetime",
+                    "pgsql": "timestamp"
+                },
+                "isNull": true
+            }
+        },
+        "updated": {
+            "type": "DateTime",
+            "default": null,
+            "field": {
+                "datatype": {
+                    "mysql": "datetime",
+                    "pgsql": "timestamp"
+                },
+                "isNull": true
+            }
+        },
+        "active": {
+            "type": "bool",
+            "default": null,
+            "field": {
+                "datatype": "boolean",
+                "isNull": true
+            }
+        }
+    }
+}
