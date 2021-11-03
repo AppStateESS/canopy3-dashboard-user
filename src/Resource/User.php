@@ -15,18 +15,18 @@ declare(strict_types=1);
 
 namespace Dashboard\User\Resource;
 
-class User
+class User extends \Canopy3\AbstractResource
 {
 
     /**
-     * @var int
+     * @var bool
      */
-    private int $id;
+    private bool $active = true;
 
     /**
-     * @var string
+     * @var DateTime
      */
-    private string $username;
+    private \DateTime $created;
 
     /**
      * @var string
@@ -39,9 +39,14 @@ class User
     private string $firstName;
 
     /**
+     * @var int
+     */
+    private int $id;
+
+    /**
      * @var string
      */
-    private string $lastName;
+    private string $internalID;
 
     /**
      * @var DateTime
@@ -51,7 +56,7 @@ class User
     /**
      * @var string
      */
-    private string $internalID;
+    private string $lastName;
 
     /**
      * @var int
@@ -61,21 +66,21 @@ class User
     /**
      * @var DateTime
      */
-    private \DateTime $created;
-
-    /**
-     * @var DateTime
-     */
     private \DateTime $updated;
 
     /**
-     * @var bool
+     * @var string
      */
-    private bool $active;
+    private string $username;
 
-    public function __construct()
+    public function getEmail(): string
     {
+        return $this->email;
+    }
 
+    public function setEmail(string $email)
+    {
+        $this->email = $email;
     }
 
 }
