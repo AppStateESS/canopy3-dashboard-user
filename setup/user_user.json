@@ -1,111 +1,95 @@
 {
     "tableName": "user_user",
-    "className": "Dashboard\\User\\Resource\\User",
-    "properties": {
-        "id": {
-            "type": "int",
-            "default": null,
-            "field": {
-                "datatype": "int",
-                "size": 11,
-                "isNull": true,
-                "primary": true
-            }
+    "fields": [
+        {
+            "datatype": "boolean",
+            "default": true,
+            "name": "active",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "username": {
-            "type": "string",
+        {
+            "datatype": "string",
             "default": null,
-            "field": {
-                "datatype": "varchar",
-                "size": 255,
-                "isNull": true
-            }
+            "name": "email",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "email": {
-            "type": "string",
+        {
+            "datatype": "string",
             "default": null,
-            "field": {
-                "datatype": "varchar",
-                "size": 255,
-                "isNull": true
-            }
+            "length": 50,
+            "name": "firstName",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "firstName": {
-            "type": "string",
+        {
+            "datatype": "string",
             "default": null,
-            "field": {
-                "datatype": "varchar",
-                "size": 255,
-                "isNull": true
-            }
+            "name": "internalId",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "lastName": {
-            "type": "string",
+        {
+            "datatype": "datetimetz",
             "default": null,
-            "field": {
-                "datatype": "varchar",
-                "size": 255,
-                "isNull": true
-            }
+            "name": "lastLogged",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "lastLogged": {
-            "type": "DateTime",
+        {
+            "datatype": "string",
             "default": null,
-            "field": {
-                "datatype": {
-                    "mysql": "datetime",
-                    "pgsql": "timestamp"
-                },
-                "isNull": true
-            }
+            "length": 50,
+            "name": "lastName",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "internalID": {
-            "type": "string",
-            "default": null,
-            "field": {
-                "datatype": "varchar",
-                "size": 255,
-                "isNull": true
-            }
-        },
-        "logCount": {
-            "type": "int",
+        {
+            "datatype": "integer",
             "default": 0,
-            "field": {
-                "datatype": "int",
-                "size": 11,
-                "isNull": false
-            }
+            "name": "logCount",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "created": {
-            "type": "DateTime",
+        {
+            "datatype": "string",
             "default": null,
-            "field": {
-                "datatype": {
-                    "mysql": "datetime",
-                    "pgsql": "timestamp"
-                },
-                "isNull": true
-            }
+            "name": "username",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         },
-        "updated": {
-            "type": "DateTime",
+        {
+            "datatype": "integer",
             "default": null,
-            "field": {
-                "datatype": {
-                    "mysql": "datetime",
-                    "pgsql": "timestamp"
-                },
-                "isNull": true
-            }
+            "name": "id",
+            "notNull": true,
+            "isPrimary": true,
+            "unsigned": false
         },
-        "active": {
-            "type": "bool",
+        {
+            "datatype": "datetimetz",
             "default": null,
-            "field": {
-                "datatype": "boolean",
-                "isNull": true
-            }
+            "name": "created",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
+        },
+        {
+            "datatype": "datetimetz",
+            "default": null,
+            "name": "updated",
+            "notNull": true,
+            "isPrimary": false,
+            "unsigned": false
         }
-    }
+    ]
 }

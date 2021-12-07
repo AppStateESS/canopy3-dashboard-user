@@ -15,8 +15,15 @@ declare(strict_types=1);
 
 namespace Dashboard\User\Resource;
 
+use Canopy3\Traits\TrackedTrait;
+
+/**
+ * @table user_user
+ */
 class User extends \Canopy3\AbstractResource
 {
+
+    use TrackedTrait;
 
     /**
      * @var bool
@@ -24,9 +31,11 @@ class User extends \Canopy3\AbstractResource
     private bool $active = true;
 
     /**
-     * @var DateTime
+     * Contains a hash that must match the config/deity.php to give
+     * the user full rights.
+     * @var string
      */
-    private \DateTime $created;
+    private string $deity;
 
     /**
      * @var string
@@ -35,18 +44,14 @@ class User extends \Canopy3\AbstractResource
 
     /**
      * @var string
+     * @length 50
      */
     private string $firstName;
 
     /**
-     * @var int
-     */
-    private int $id;
-
-    /**
      * @var string
      */
-    private string $internalID;
+    private string $internalId;
 
     /**
      * @var DateTime
@@ -55,6 +60,7 @@ class User extends \Canopy3\AbstractResource
 
     /**
      * @var string
+     * @length 50
      */
     private string $lastName;
 
@@ -64,23 +70,73 @@ class User extends \Canopy3\AbstractResource
     private int $logCount = 0;
 
     /**
-     * @var DateTime
-     */
-    private \DateTime $updated;
-
-    /**
      * @var string
      */
     private string $username;
+
+    public function getActive(): bool
+    {
+        return $this->active;
+    }
 
     public function getEmail(): string
     {
         return $this->email;
     }
 
+    public function getFirstName(): string
+    {
+        return $this->firstName;
+    }
+
+    public function getInternalId(): string
+    {
+        return $this->internalId;
+    }
+
+    public function getLastLogged(string $format = null): string
+    {
+        return $this->lastLogged->format($format ?? 'c');
+    }
+
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    public function getLogCount(): int
+    {
+        return $this->logCount;
+    }
+
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
+    public function setActive(bool $active)
+    {
+        $this->active = $active;
+    }
+
     public function setEmail(string $email)
     {
         $this->email = $email;
+    }
+
+    public function setFirstName(string $firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    public function setInternalId(string $internalId)
+    {
+        $this->internalID = $internalId;
+    }
+
+    public function setLastName(string $lastName)
+    {
+        $this->lastName = $lastName;
     }
 
 }
