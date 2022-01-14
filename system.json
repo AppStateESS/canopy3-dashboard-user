@@ -1,0 +1,16 @@
+{
+  "name": "canopy3-dashboard-user",
+  "authors": ["Matthew McNaney <mcnaneym@appstate.edu>"],
+  "directory": "canopy3-dashboard-user",
+  "description": "Allows user administration in Canopy 3",
+  "homepage": "https://github.com/AppStateESS/canopy3-dashboard-user.git",
+  "license": "MIT",
+  "namespace": "User",
+  "title": "Canopy 3 User Dashboard",
+  "version": "v1.0.0",
+  "repository": {
+    "url": "https://github.com/AppStateESS/canopy3-dashboard-user.git",
+    "releases": "https://api.github.com/repos/AppStateESS/triptrack/releases"
+  },
+  "type": "dashboard"
+}
